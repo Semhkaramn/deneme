@@ -206,34 +206,6 @@
                 </a>
             </div>
             </div>
-           <div v-if="!_.isNull(notifyFix)">
-            <div class="notify-fixed" v-show="notifyShow" v-if="notifyActive == notifyKey" :style="'border-color: ' + _.find(client.sites, ['site', notify.site]).color" v-for="(notify, notifyKey) in _.orderBy(notifyFix.sites, [notify =&gt; parseInt(notify.sort)], ['asc'])" :key="notifyKey">
-                <div class="button">
-                    <div class="close" false>
-                    <svg viewbox="0 0 24 24" fill="none"> <g id="Edit / Close_Circle"> <path id="Vector" d="M9 9L11.9999 11.9999M11.9999 11.9999L14.9999 14.9999M11.9999 11.9999L9 14.9999M11.9999 11.9999L14.9999 9M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </svg>
-                    </div>
-                </div>
-                <div class="logo">
-                    <img :src="client.cdn_url + _.find(client.sites, ['site', notify.site]).site + '.png'" width="150" src="images/gir.gg-cevdet">
-                </div>
-                <h3 style="font-size:12px;margin: 0px;margin-top: 10px;">S&#304;ZE B&#304;R MESAJI VAR !</h3>
-                <div class="center" style="margin: 0px;">
-                    <h1 style="margin: 0px;" :style="'color: ' + _.find(client.sites, ['site', notify.site]).color">{{ _.find(client.sites, ['site', notify.site]).desc[0] }}</h1>
-                    <p style="margin-bottom: 0px;">{{ _.find(client.sites, ['site', notify.site]).desc[1] }}</p>
-                </div>
-                <small style="margin-bottom: 5px; opacity: 0.5;">&#350;imdi Yararlan&#305;n!</small>
-                <a :href="_.find(client.sites, ['site', notify.site]).url" :style="'background: ' + _.find(client.sites, ['site', notify.site]).color" target="_blank" href="cevdet.html">
-                    &#350;&#304;MD&#304; G&#304;R&#304;&#350; YAP
-                </a>
-                </div>
-            </div>
-            <div class="footer-c"><div class="licence">
-                CEVDET t&uuml;m haklar&#305; sakl&#305;d&#305;r.
-                </div> <a target="_blank" href="https://rxfast.co/contact" class="cpyrght">
-                This App Provided By <img src="images/logo-rx.png"></a></div>
-        </div>
-        <div class="overlay" v-show="!_.isEmpty(notifyFix.sites)" v-if="notifyShow"></div>
-    </div>
     <script src="js/2.5.17-vue.min.js"></script>
     <script src="js/lodash@4.17.20-lodash.min.js"></script>
     <script src="js/logo-reset.js"></script>
